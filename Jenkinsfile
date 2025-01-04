@@ -47,7 +47,7 @@ pipeline {
                         }   else if (params.Terraform_Action == 'destroy') {
                             sh "terraform -chdir=eks/ destroy -var-file=${params.Environment}.tfvars -auto-approve"
                         } else {
-                            error "Invalid value for Terraform_Action: ${params.Terraform_Action}"
+                            error "Sorry, Invalid value for Terraform_Action: ${params.Terraform_Action}"
                         }
                     }
                 }
